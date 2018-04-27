@@ -1,0 +1,27 @@
+<div class="container">
+    <div>
+        @model Geology.Models.UserViewModel
+
+    </div>
+    <a id="logregLink" href="/login_page">Already Registered?</a>
+    <form asp-controller="Home" asp-action="Registration" method="post">
+        @Html.AntiForgeryToken()
+        <span>@ViewBag.error_exists</span> 
+        <span asp-validation-for="FirstName"></span><br>
+        <label asp-for="FirstName"></label>
+        <input class="login_submit black" asp-for="FirstName"/> <br>
+        <span asp-validation-for="LastName"></span><br>
+        <label asp-for="LastName"></label>
+        <input class="login_submit black" asp-for="LastName"/> <br>
+        <span asp-validation-for="Email"></span><br>
+        <label asp-for="Email"></label>
+        <input class="login_submit black" asp-for="Email"/><br>
+        <span asp-validation-for="Password"></span><br>
+        <label asp-for="Password"></label>
+        <input class="login_submit black" asp-for="Password"/><br>
+        <span asp-validation-for="PasswordConfirm"></span><br>
+        <label asp-for="PasswordConfirm"></label>
+        <input class="login_submit black" asp-for="PasswordConfirm"/>
+        <button class="black" type="submit">Register</button>
+    </form>
+</div>    

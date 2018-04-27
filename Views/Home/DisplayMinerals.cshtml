@@ -1,0 +1,43 @@
+<div class="container">
+    <div>
+		@if(ViewBag.userId != null)
+		{
+			<a href="/logout">Logout</a>
+		} else {
+			<a href="/login_page">Login</a>
+		}
+	</div>
+    <table class="table">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Hardness</th>
+            <th scope="col">Color</th>
+            <th scope="col">Crystal System</th>
+            <th scope="col">Opacity</th>
+            <th scope="col">Luster</th>
+            <th scope="col">Streak</th>
+            <th scope="col">Cleavage Plane(s)</th>
+            <th scope="col">Fracture</th>
+            <th scope="col">Habit</th>
+            <th scope="col">Chemical Formula</th>
+        </thead>
+        <tbody>
+            @foreach(Mineral mineral in ViewBag.minerals){
+                <tr scope="row">
+                    <td><a href="mineral/@mineral.MineralId">@mineral.Name</a></td>
+                    <td>@mineral.Hardness</td>
+                    <td>@mineral.Color</td>
+                    <td>@mineral.CrystalSystem</td>
+                    <td>@mineral.Opacity</td>
+                    <td>@mineral.Luster</td>
+                    <td>@mineral.Streak</td>
+                    <td>@mineral.CleavagePlanes</td>
+                    <td>@mineral.Fracture</td>
+                    <td>@mineral.Habit</td>
+                    <td>@mineral.ChemicalFormula.FormulaName</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,188 @@
+a {
+	color: white;
+}
+
+#answerBox {
+	border: solid yellow 5px;
+	text-align: center;
+	font-size:25pt;
+}
+
+.back {
+	width: 50%;
+	display: inline-block;
+	text-align: center;
+	margin-left: 25%;
+	margin-right: 25%;
+	margin-top: 10px;
+}
+
+body {
+	background-color: #006600;
+	color: white;
+	font-family: Arial, sans-serif;
+}
+
+#border {
+	border-style: inset;
+	border-color: white;
+	border-width: 10px;
+	padding: 15px;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+#center{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	clear: both;
+}
+
+#clear {
+	clear: both;
+	text-align: center;
+}
+
+#error {
+	border: solid #FFFF33 5px;
+	color: white;
+	font-size: 20pt;
+	text-align: center;
+	
+}
+
+
+
+h1 {
+	text-align: center;
+}
+
+h2{
+	text-transform: capitalize;
+	text-align: center;
+}
+
+#information
+{
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+#gameOver {
+	font-size: 25pt;
+	margin: 10pt;
+	border: inset;
+	text-align: center;
+}
+
+.header 
+{
+	display: inline;
+	font-size: 20pt;
+	margin: 10px;
+	
+}
+
+.image {
+	display:inline;
+}
+
+#link{
+	width: 50%;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+.list {
+	display: inline-block;
+	font-size: 14pt;
+	list-style-type: none;
+}
+
+#mineralPictures {
+	width: 200px;
+	height: 200px;
+	padding: 10px;
+	text-align:center;
+}
+
+#pictures {
+	text-align: center;
+}
+
+#quizChoice{
+	margin-left: auto;
+	margin-right: auto;
+	width: 70%;
+	text-align: center;
+}
+
+.quizForm{
+	display: inline;
+	text-align: center;
+	margin-right: 10px;
+}
+
+.search {
+	display: inline;
+	padding: 15px;
+} 
+
+#testImage {
+	width: 200px;
+	height: 200px;
+}
+
+#testQuestion {
+	text-align: center;
+}
+
+#totalCount, #totalRight, #totalWrong {
+	display: inline;
+	font-size: 20pt;
+}
+
+.black {
+	color: black;
+}
+
+.sidebyside {
+	display: inline-block;
+	width:40%;
+	margin: 10px;
+	vertical-align: top;
+}
+
+#logregLink {
+	margin:20px;
+}
+#submit {
+	background-color: #76A5AF;
+	color:white;
+	margin:10px;
+}
+
+/* .login {
+	background-color: #76A5AF;
+} */
+
+.login_submit {
+	margin:10px;
+}
+
+.comment_box {
+	min-width:450px;
+	min-height: 200px;
+	margin:auto;
+}
+
+.centerImage {
+	text-align: center;
+}

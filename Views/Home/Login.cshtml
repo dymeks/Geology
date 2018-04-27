@@ -1,0 +1,15 @@
+<div class="container">
+    <a id="logregLink" href="/registration_page">Need to Register?</a>
+    <form class="login" action="/login" method="POST"> 
+        @Html.AntiForgeryToken()
+        <div>
+            @ViewBag.error
+        </div>
+        <label for="Email">Email</label>
+        <input type="email" id ="Email" name= "email" />
+        
+        <label for="Password">Password</label>
+        <input class="black" type="password" name="password" id="Password"/>
+        <input id = 'submit' type="submit" name="submit" value="Login">
+    </form>
+</div>

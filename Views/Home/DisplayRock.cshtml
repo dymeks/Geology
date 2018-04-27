@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+		@if(ViewBag.userId != null)
+		{
+			<a href="/logout">Logout</a>
+		} else {
+			<a href="/login_page">Login</a>
+		}
+	</div>
+    <h1>@ViewBag.rock.Name</h1>
+    <ul class="list-group sidebyside">
+        <li class="list-group-item black">Group: @ViewBag.rock.GroupName</li>
+        <li class="list-group-item black">Family: @ViewBag.rock.Family</li>
+        <li class="list-group-item black">Type: @ViewBag.rock.Type</li>
+        <li class="list-group-item black">Texture: @ViewBag.rock.Texture</li>
+        <li class="list-group-item black">Structure: @ViewBag.rock.Structure</li>
+                
+    </ul>
+    <div class="sidebyside">
+        <h1>@ViewBag.rock.Name has these minerals:</h1>
+        <ul class="list-group">
+            @{
+                @foreach(RockHasMineral mineral in ViewBag.rock.minerals)
+                {
+                    <li class="list-group-item black"><a class="black" href="/mineral/@mineral.Mineral.MineralId">@mineral.Mineral.Name</a></li>
+                }
+            }
+        </ul>
+    </div>
+    
+</div>

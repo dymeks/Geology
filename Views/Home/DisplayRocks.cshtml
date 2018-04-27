@@ -1,0 +1,33 @@
+<div class="container">
+    <div>
+		@if(ViewBag.userId != null)
+		{
+			<a href="/logout">Logout</a>
+		} else {
+			<a href="/login_page">Login</a>
+		}
+	</div>
+    <table class="table">
+        <thead>
+            <th scope="col">Name</th>
+            <th scope="col">Group</th>
+            <th scope="col">Family</th>
+            <th scope="col">Type</th>
+            <th scope="col">Texture</th>
+            <th scope="col">Structure</th>
+        </thead>
+        <tbody>
+            @foreach(Rock rock in ViewBag.rocks){
+                <tr scope="row">
+                    <td><a href="rock/@rock.RockId">@rock.Name</a></td>
+                    <td>@rock.GroupName</td>
+                    <td>@rock.Family</td>
+                    <td>@rock.Type</td>
+                    <td>@rock.Texture</td>
+                    <td>@rock.Structure</td>
+                </tr>
+            }
+            
+        </tbody>
+    </table>
+</div>

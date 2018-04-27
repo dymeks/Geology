@@ -1,0 +1,38 @@
+<div class="container">
+    <div>
+		@if(ViewBag.userId != null)
+		{
+			<a href="/logout">Logout</a>
+		} else {
+			<a href="/login_page">Login</a>
+		}
+	</div>
+    <h1>@ViewBag.mineral.Name</h1>
+    <div>
+        @ViewBag.error
+    </div>
+    <div class="centerImage">
+        @{
+            string imageTitle = $"{ViewBag.mineral.Name.ToLower()}.jpg";
+            System.Console.WriteLine($"{imageTitle}");
+            <img src="~/images/minerals/@imageTitle" alt="@ViewBag.mineral.Name">
+        }
+    </div>
+    
+    <ul class="list-group">
+        <li class="list-group-item black">Chemical Formula: @ViewBag.mineral.ChemicalFormula.FormulaName</li>
+        <li class="list-group-item black">Hardness: @ViewBag.mineral.Hardness</li>
+        <li class="list-group-item black">Color: @ViewBag.mineral.Color</li>
+        <li class="list-group-item black">CrystalSystem: @ViewBag.mineral.CrystalSystem</li>
+        <li class="list-group-item black">Opacity: @ViewBag.mineral.Opacity</li>
+        <li class="list-group-item black">Luster: @ViewBag.mineral.Luster</li>
+        <li class="list-group-item black">Streak: @ViewBag.mineral.Streak</li>
+        <li class="list-group-item black">Cleavage Planes: @ViewBag.mineral.CleavagePlanes</li>
+        <li class="list-group-item black">Fracture: @ViewBag.mineral.Fracture</li>
+        <li class="list-group-item black">Habit: @ViewBag.mineral.Habit</li>
+                
+    </ul>
+    <div>
+        <a href="/saveFavorites/@ViewBag.mineral.MineralId">Save to Favorites</a>
+    </div>
+</div>

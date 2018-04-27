@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Welcome, @ViewBag.user.FirstName!</h1>
+
+    <div class="favoriteRocks sidebyside">
+        <h2>Favorite Rocks</h2>
+    </div>
+    <div class="favoriteMinerals sidebyside">
+        <h2>Favorite Minerals</h2>
+        <ul>
+            @foreach(UserLikesMineral mineral in ViewBag.favoriteMinerals)
+            {
+                <li><a href="/mineral/@mineral.Mineral.MineralId">@mineral.Mineral.Name</a></li>
+            }
+        </ul>
+        
+    </div>
+</div>

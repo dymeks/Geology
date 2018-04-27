@@ -1,0 +1,44 @@
+<div class="container">
+    <div class="warning">
+        @if(ViewBag.UserId == null)
+        {
+            <p>Warning! You are not logged in, all stats won't be saved. </p>
+        }
+    </div>
+    <h1>Choose your quiz!</h1>
+    <div id = "quizChoice">
+        <form class = "quizForm" action = "/quizAll"> 
+            <fieldset>
+                <legend>Quiz All</legend>
+                <p>How many Questions?</p>
+                <input type= "radio" name = "numberOfQuestions" value = "10" checked> Ten 
+                <input type= "radio" name = "numberOfQuestions" value = "20"> Twenty
+                <input type= "radio" name = "numberOfQuestions" value = "All"> All 
+                <input class="black" type = submit value = "Go!">
+            </fieldset>
+        </form>
+        <!-- Allows user to quiz themselves on all rocks-->
+        <form class="quizForm" action = "/quizAllRocks">
+            <fieldset>
+                <legend>Quiz Rocks</legend>
+                <p>How many Questions?</p>
+                <input type= "radio" name = "numberOfQuestions" value = "10" checked> Ten 
+                <input type= "radio" name = "numberOfQuestions" value = "20"> Twenty
+                <input type= "radio" name = "numberOfQuestions" value = "All"> All 
+                <input class="black" type = submit value = "Go!">
+            </fieldset>
+        </form>
+        <!-- Allows user to quiz themselves on all minerals-->
+        <form class = "quizForm" action = "/quizAllMinerals">
+            <fieldset>
+                <legend>Quiz Minerals</legend>
+                <p>How many Questions?</p>
+                <input type= "radio" name = "numberOfQuestions" value = "10" checked> Ten 
+                <input type= "radio" name = "numberOfQuestions" value = "20"> Twenty
+                <input type= "radio" name = "numberOfQuestions" value = "All"> All 
+                <input class="black" type = submit value = "Go!">
+            </fieldset>
+        </form>
+    </div>
+    
+</div>

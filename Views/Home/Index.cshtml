@@ -1,0 +1,30 @@
+﻿<div class="container">
+	<div>
+		@if(ViewBag.userId != null)
+		{
+			<a href="/logout">Logout</a>
+		} else {
+			<a href="login_page">Login</a>
+		}
+	</div>
+	
+    <h1>Search for Rocks and Minerals!</h1>
+		
+		<div id = "border">
+			<form id = "mineralSearch" class = "search" action = "find_mineral" method = "post">
+				<label for="mineral">Find a Mineral: </label>
+				<input class="black" type="text" name="mineralName">
+				<input class="black" type="submit" name="submit name">
+			</form>
+			
+			<form id="rockSearch"class = "search" action = "find_rock" method = "post">
+				<label for="rock">Find a Rock: </label> 
+				<input class="black" type="text" name="rockName">
+				<input class="black" type="submit" name="submit name">
+			</form>
+		</div>
+
+		<div>
+			<a href="/quiz_landingpage">Test Your Skills!</a>
+		</div>
+</div>
